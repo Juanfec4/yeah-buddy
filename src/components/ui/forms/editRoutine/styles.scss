@@ -1,6 +1,6 @@
 @use "../../../../styles/partials/colors" as *;
 @use "../../../../styles/partials/variables" as *;
-
+@use "../../../../styles/partials/responsive" as *;
 .edit-routine {
   display: flex;
   align-items: center;
@@ -10,13 +10,14 @@
   background-color: $medium-grey;
   border-radius: $border-radius-md;
   border: $davy-grey $border-width solid;
-  width: min-content;
-  margin: 0 auto;
-  padding: 100px;
+  min-width: 21rem;
+  padding: $padding-sm;
   &__container {
     position: relative;
     background-color: $baltic-sea;
-    padding: $padding-lg;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     min-height: 100vh;
   }
   &__draggable {
