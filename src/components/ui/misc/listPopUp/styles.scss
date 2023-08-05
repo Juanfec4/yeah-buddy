@@ -1,0 +1,15 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.pop-up__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: max-content;
+  min-height: 100%;
+
+  object-fit: fill;
+  background-color: rgba($medium-grey, 1);
+}

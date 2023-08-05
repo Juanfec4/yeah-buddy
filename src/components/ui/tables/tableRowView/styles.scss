@@ -4,6 +4,8 @@
 .table-row {
   background-color: $dark-jungle-green;
   text-align: center;
+  min-width: $card-min-width;
+  max-width: $card-max-width;
   &__data {
     padding: $padding-sm 0;
   }

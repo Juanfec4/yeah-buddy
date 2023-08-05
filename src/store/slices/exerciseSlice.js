@@ -29,7 +29,6 @@ const createExerciseSlice = (set, get) => ({
   patchExercise: async (exercise) => {
     try {
       const response = await APIService.patchObject("exercises", exercise._id, exercise);
-      console.log(response);
       set(
         produce((state) => {
           state.exercises.data = [...state.exercises.data, response.data];

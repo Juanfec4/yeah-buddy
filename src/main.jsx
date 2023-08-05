@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-d
 import ExercisesPage from "./pages/exerciseList/index.jsx";
 import AddExercisePage from "./pages/addExercise/index.jsx";
 import EditExercisePage from "./pages/editExercise/index.jsx";
+import AddRoutinePage from "./pages/addRoutine/index.jsx";
+import RoutineListPage from "./pages/routineList/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
   {
     path: "exercises/edit",
     element: <EditExercisePage />,
+  },
+  {
+    path: "routines",
+    element: <RoutineListPage />,
+  },
+  {
+    path: "routines/add",
+    element: <AddRoutinePage />,
   },
 ]);
 

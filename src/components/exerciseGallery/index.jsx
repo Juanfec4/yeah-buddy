@@ -15,8 +15,8 @@ const ExerciseGallery = ({ exercises }) => {
       <div className="exercise-gallery">
         <Placeholder content={"add exercise"} handleClick={handleAddExercise} />
         {exercises
-          ? exercises.map((exercise) => {
-              return <ExerciseCard key={exercise._id} exercise={exercise} />;
+          ? exercises.map((exercise, index) => {
+              return <ExerciseCard key={`${exercise._id}-${index}`} exercise={exercise} />;
             })
           : null}
       </div>

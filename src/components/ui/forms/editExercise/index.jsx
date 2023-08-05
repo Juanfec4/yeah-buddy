@@ -16,7 +16,15 @@ const EditExercise = ({ muscleGroups, targetExercise }) => {
   const navigate = useNavigate();
   const [exercise, setExercise] = useState(
     targetExercise
-      ? targetExercise
+      ? {
+          ...targetExercise,
+          category: finderHelpers.findIdByKeyValue(
+            "name",
+            targetExercise.category,
+            categories.data
+          ),
+          bodyPart: finderHelpers.findIdByKeyValue("name", targetExercise.bodyPart, bodyParts.data),
+        }
       : {
           name: "", //String
           category: "", //ID
@@ -36,7 +44,10 @@ const EditExercise = ({ muscleGroups, targetExercise }) => {
 
   const handleSaveExercise = async (e) => {
     e.preventDefault();
-    await patchExercise(exercise);
+    const categoryName = finderHelpers.findElementNameById(exercise.category, categories.data);
+    const bodyPartName = finderHelpers.findElementNameById(exercise.bodyPart, bodyParts.data);
+    const newExercise = { ...exercise, category: categoryName, bodyPart: bodyPartName };
+    await patchExercise(newExercise);
     navigate("../exercises");
   };
 

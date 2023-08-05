@@ -5,6 +5,7 @@
   &__head {
     background-color: rgba($salmon-dark, 0.2);
     outline: $salmon-dark solid $border-width;
+    width: auto;
   }
   &__heading {
     text-transform: uppercase;

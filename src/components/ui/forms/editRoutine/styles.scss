@@ -1,0 +1,33 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.edit-routine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $margin-md;
+  background-color: $medium-grey;
+  border-radius: $border-radius-md;
+  border: $davy-grey $border-width solid;
+  width: min-content;
+  margin: 0 auto;
+  padding: 100px;
+  &__container {
+    position: relative;
+    background-color: $baltic-sea;
+    padding: $padding-lg;
+    min-height: 100vh;
+  }
+  &__draggable {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: $margin-md;
+  }
+  &__heading {
+    text-align: center;
+  }
+}

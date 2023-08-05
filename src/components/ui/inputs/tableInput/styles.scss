@@ -12,6 +12,7 @@
     border-radius: $border-radius-md;
     min-height: $input-min-height-sm;
     max-width: $input-max-width-sm;
+    width: $input-width;
     &::placeholder {
       font-style: italic;
       color: rgba($white, 0.75);

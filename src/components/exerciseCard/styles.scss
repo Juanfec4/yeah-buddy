@@ -4,7 +4,8 @@
 .exercise-card {
   display: flex;
   flex-direction: column;
-  width: 425px;
+  min-width: $card-min-width;
+  max-width: $card-max-width;
   background-color: $medium-grey;
   padding: $padding-md;
   border-radius: $border-radius-md;
