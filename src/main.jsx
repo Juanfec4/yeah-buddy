@@ -1,0 +1,28 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
+import ExercisesPage from "./pages/exerciseList/index.jsx";
+import AddExercisePage from "./pages/addExercise/index.jsx";
+import EditExercisePage from "./pages/editExercise/index.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "exercises",
+    element: <ExercisesPage />,
+  },
+  {
+    path: "exercises/add",
+    element: <AddExercisePage />,
+  },
+  {
+    path: "exercises/edit",
+    element: <EditExercisePage />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);

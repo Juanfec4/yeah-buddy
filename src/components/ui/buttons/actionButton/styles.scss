@@ -1,0 +1,29 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  border-radius: $border-radius-md;
+  height: $button-height-sm;
+  width: $button-height-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &--edit {
+    @extend .action-button;
+    background-color: $purple-mimosa;
+  }
+  &--delete {
+    @extend .action-button;
+    background-color: $bean-red;
+  }
+  &--confirm {
+    @extend .action-button;
+    background-color: $paris-green;
+  }
+  &__icon {
+    height: $action-button-icon-diameter;
+    width: $action-button-icon-diameter;
+  }
+}

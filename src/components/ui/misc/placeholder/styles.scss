@@ -1,0 +1,24 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.placeholder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 425px;
+  background-color: rgba($salmon-dark, 0.1);
+  padding: $padding-md;
+  border-radius: $border-radius-md;
+  border: $salmon-dark calc($border-width * 2) dashed;
+  &__text {
+    color: $salmon-dark;
+  }
+  &:hover {
+    background-color: rgba($white, 0.25);
+    border-color: $white;
+    .placeholder-container__text {
+      color: $white;
+    }
+  }
+}

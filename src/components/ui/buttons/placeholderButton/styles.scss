@@ -1,0 +1,19 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.placeholder-button {
+  padding: $padding-sm;
+  height: $button-height-md;
+  min-width: $button-min-width-lg;
+  box-sizing: border-box;
+  background-color: rgba($salmon-dark, 0.1);
+  border-radius: $border-radius-md;
+  border: $salmon-dark $border-width dashed;
+  display: flex;
+  &__text {
+    color: $salmon-dark;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+  }
+}

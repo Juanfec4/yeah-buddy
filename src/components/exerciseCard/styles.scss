@@ -1,0 +1,28 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+
+.exercise-card {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  background-color: $medium-grey;
+  padding: $padding-md;
+  border-radius: $border-radius-md;
+  border: $davy-grey $border-width solid;
+  position: relative;
+  &__heading {
+    text-wrap: balance;
+    text-overflow: clip;
+    width: 100%;
+  }
+  &__container {
+    display: flex;
+    gap: $margin-sm;
+    margin: $margin-sm 0;
+  }
+  &__buttons-container {
+    display: flex;
+    width: auto;
+    gap: calc($margin-sm/2);
+  }
+}

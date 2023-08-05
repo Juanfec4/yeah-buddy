@@ -1,0 +1,35 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.option-input {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-size: $input-label-size;
+    color: $white;
+    font-style: italic;
+    padding-bottom: calc($border-width * 3);
+    padding-left: $border-width;
+  }
+  &__select {
+    background-color: $dark-jungle-green;
+    border-radius: $border-radius-md;
+    padding: $input-padding-sm;
+    border: $border-width $davy-grey solid;
+    text-transform: capitalize;
+    min-width: $input-min-width-sm;
+    &:focus-within {
+      border: $border-width $salmon-dark solid;
+      outline: none;
+    }
+    &:hover {
+      border: $border-width $salmon-dark solid;
+      outline: none;
+    }
+  }
+  &__option {
+    background-color: $dark-jungle-green;
+  }
+}

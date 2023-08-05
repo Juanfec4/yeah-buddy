@@ -1,0 +1,16 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  gap: $margin-lg;
+  padding: $padding-lg;
+  &__content {
+    width: 100%;
+  }
+}

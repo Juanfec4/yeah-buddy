@@ -1,0 +1,11 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.category-tag {
+  background-color: rgba($salmon-dark, 0.25);
+  color: $salmon-dark;
+  border-radius: $border-radius-md;
+  padding: 0 $padding-sm;
+  text-transform: lowercase;
+  font-style: italic;
+}

@@ -1,0 +1,17 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.table-row {
+  background-color: $dark-jungle-green;
+  text-align: center;
+  &__data {
+    padding: $padding-sm 0;
+  }
+  &__action {
+    padding: $padding-sm;
+  }
+  &--complete {
+    @extend .table-row;
+    background-color: rgba($paris-green, 0.25);
+  }
+}

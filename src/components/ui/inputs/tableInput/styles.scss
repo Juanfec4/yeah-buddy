@@ -1,0 +1,20 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.table {
+  &__input {
+    background-color: rgba($salmon-dark, 0.1);
+    border: solid $border-width $salmon-dark;
+    outline: none;
+    color: $salmon-dark;
+    margin: 0 $margin-sm;
+    text-align: center;
+    border-radius: $border-radius-md;
+    min-height: $input-min-height-sm;
+    max-width: $input-max-width-sm;
+    &::placeholder {
+      font-style: italic;
+      color: rgba($white, 0.75);
+    }
+  }
+}

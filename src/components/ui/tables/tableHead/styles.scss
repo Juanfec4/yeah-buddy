@@ -1,0 +1,15 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.table {
+  &__head {
+    background-color: rgba($salmon-dark, 0.2);
+    outline: $salmon-dark solid $border-width;
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+    padding: calc($padding-sm/2);
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  background-color: $medium-grey;
+  padding: $padding-md;
+  border-radius: $border-radius-md;
+  border: $davy-grey $border-width solid;
+  &__heading {
+    text-align: center;
+    text-wrap: balance;
+    text-overflow: clip;
+  }
+  &__inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-sm;
+    margin-bottom: $margin-sm;
+  }
+  &__buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: $margin-sm;
+  }
+}

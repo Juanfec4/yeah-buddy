@@ -1,0 +1,22 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.button {
+  &--primary {
+    padding: $padding-sm;
+    height: $button-height-md;
+    min-width: $button-min-width-sm;
+    box-sizing: border-box;
+    background-color: $salmon-dark;
+    border-radius: $border-radius-md;
+    border: none;
+    display: flex;
+
+    .button__text {
+      color: $dark-jungle-green;
+      align-self: center;
+      justify-self: center;
+      width: 100%;
+    }
+  }
+}

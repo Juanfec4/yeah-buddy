@@ -1,0 +1,9 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+.set-table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border-radius: $border-radius-md;
+  margin: $margin-sm 0;
+}
