@@ -1,5 +1,5 @@
 import ListElement from "../ui/misc/listElement";
-
+import "./styles.scss";
 const ExerciseList = ({ exercises, handleAddClick }) => {
   return (
     <div className="exercise-list">

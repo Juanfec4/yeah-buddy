@@ -1,0 +1,21 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/responsive" as *;
+.exercise-list {
+  width: max-content;
+  @include md {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: calc((350px + $padding-sm) * 3);
+  }
+  @include md {
+    width: calc((350px + $padding-sm) * 4);
+  }
+  @include lg {
+    width: calc((350px + $padding-sm) * 5);
+  }
+}
