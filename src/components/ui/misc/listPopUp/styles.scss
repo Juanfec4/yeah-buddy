@@ -10,10 +10,10 @@
     right: 0;
     background-color: rgba($medium-grey, 1);
     padding-top: $padding-sm;
-  }
-  &__container {
     height: max-content;
     min-height: 100%;
+  }
+  &__container {
     display: flex;
     align-items: center;
     justify-content: center;
