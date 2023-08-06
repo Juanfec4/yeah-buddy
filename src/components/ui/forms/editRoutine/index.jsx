@@ -9,6 +9,7 @@ import ListPopUp from "../../misc/listPopUp";
 import ListElement from "../../misc/listElement";
 
 import finderHelpers from "../../../../utilities/helpers/finders";
+import arrayHelpers from "../../../../utilities/helpers/arrayHelpers";
 import "./styles.scss";
 import PrimaryButton from "../../buttons/primaryButton";
 
@@ -16,16 +17,28 @@ const EditRoutine = ({ targetRoutine }) => {
   const ref = useRef(null);
   const navigate = useNavigate();
 
-  const { exercises, fetchExercises, postPlan } = useStore((state) => state);
+  const { exercises, postPlan, patchPlan } = useStore((state) => state);
   const [showListPopUp, setShowListPopUp] = useState(false);
   const [routine, setRoutine] = useState({
     name: "",
     exercises: [],
   });
 
+  useEffect(() => {
+    if (targetRoutine) {
+      setRoutine(targetRoutine);
+    }
+  }, []);
+
   const handlePostPlan = async (e) => {
     e.preventDefault();
     await postPlan(routine);
+    navigate("../routines");
+  };
+
+  const handlePatchPlan = async (e) => {
+    e.preventDefault();
+    await patchPlan(routine);
     navigate("../routines");
   };
 
@@ -76,15 +89,13 @@ const EditRoutine = ({ targetRoutine }) => {
     if (!result.destination) {
       return;
     }
-    const items = Array.from(routine.exercises);
-    const [reorderedItem] = routine.exercises.splice(result.source.index, 1);
-    items.splice(result.destination.index, 1, reorderedItem);
-    setRoutine({ ...routine, exercises: [...items] });
+    const reorderedItems = arrayHelpers.swapItems(
+      routine.exercises,
+      result.source.index,
+      result.destination.index
+    );
+    setRoutine({ ...routine, exercises: reorderedItems });
   };
-
-  useEffect(() => {
-    fetchExercises();
-  }, [showListPopUp]);
 
   return (
     <div className="edit-routine__container" ref={ref}>
@@ -140,7 +151,10 @@ const EditRoutine = ({ targetRoutine }) => {
             )}
           </Droppable>
         </DragDropContext>
-        <PrimaryButton content={"Create Routine"} handleClick={handlePostPlan} />
+        <PrimaryButton
+          content={targetRoutine ? "Save Routine" : "Create Routine"}
+          handleClick={targetRoutine ? handlePatchPlan : handlePostPlan}
+        />
       </form>
     </div>
   );

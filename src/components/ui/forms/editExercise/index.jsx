@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import useStore from "../../../../store/useStore";
 import { useNavigate } from "react-router-dom";
 
@@ -32,7 +32,6 @@ const EditExercise = ({ muscleGroups, targetExercise }) => {
           sets: [], //Objects {weight: Number, reps: Number}
         }
   );
-
   const handleCreateExercise = async (e) => {
     e.preventDefault();
     const categoryName = finderHelpers.findElementNameById(exercise.category, categories.data);

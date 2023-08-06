@@ -6,6 +6,7 @@ import ExercisesPage from "./pages/exerciseList/index.jsx";
 import AddExercisePage from "./pages/addExercise/index.jsx";
 import EditExercisePage from "./pages/editExercise/index.jsx";
 import AddRoutinePage from "./pages/addRoutine/index.jsx";
+import EditRoutinePage from "./pages/editRoutine/index.jsx";
 import RoutineListPage from "./pages/routineList/index.jsx";
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "routines/add",
     element: <AddRoutinePage />,
+  },
+  {
+    path: "routines/edit",
+    element: <EditRoutinePage />,
   },
 ]);
 

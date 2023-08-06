@@ -16,15 +16,12 @@ const findIdByKeyValue = (key, value, arrayOfElements) => {
   return undefined;
 };
 
-const findAndDeleteByIdAndIndex = (arrayOfElements, index, element) => {
-  for (let i = 0; i < arrayOfElements.length; i++) {
-    if (arrayOfElements[i]._id === element._id) {
-      if (i === index) {
-        arrayOfElements.splice(i, 1);
-      }
-    }
+const findAndDeleteByIdAndIndex = (arrayOfElements, index, targetElement) => {
+  let newArrayOfElements = [...arrayOfElements];
+  if (newArrayOfElements[index]._id == targetElement._id) {
+    newArrayOfElements.splice(index, 1);
   }
-  return arrayOfElements;
+  return newArrayOfElements;
 };
 
 export default { findElementNameById, findIdByKeyValue, findAndDeleteByIdAndIndex };

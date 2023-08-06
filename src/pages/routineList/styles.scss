@@ -1,0 +1,9 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+
+.routines-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-sm;
+}

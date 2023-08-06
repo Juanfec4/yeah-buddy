@@ -26,6 +26,22 @@ const createPlanSlice = (set, get) => ({
       );
     }
   },
+  patchPlan: async (plan) => {
+    try {
+      const response = await APIService.patchObject("plans", plan._id, plan);
+      set(
+        produce((state) => {
+          state.plans.data = [...state.plans.data, response.data];
+        })
+      );
+    } catch (error) {
+      set(
+        produce((state) => {
+          state.plans.patchError = error.response.data;
+        })
+      );
+    }
+  },
 
   postPlan: async (plan) => {
     try {

@@ -8,7 +8,6 @@ const ExercisesPage = () => {
   useEffect(() => {
     fetchExercises();
   }, []);
-
   return (
     <div className="exercise-list">
       <h1 className="exercise-list__heading">Exercises</h1>

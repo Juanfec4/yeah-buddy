@@ -35,7 +35,7 @@ const ListElement = ({
       {element.sets
         ? element.sets.map((set, index) => {
             return (
-              <span className="list-element__set">
+              <span className="list-element__set" key={index}>
                 <p className="list-element__set-data--number">{index + 1}</p>
                 <p className="list-element__set-data--period">•</p>
                 <p className="list-element__set-data">
