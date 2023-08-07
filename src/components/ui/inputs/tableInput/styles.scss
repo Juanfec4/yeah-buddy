@@ -1,5 +1,6 @@
 @use "../../../../styles/partials/colors" as *;
 @use "../../../../styles/partials/variables" as *;
+@use "../../../../styles/partials/responsive" as *;
 
 .table {
   &__input {
@@ -13,6 +14,9 @@
     min-height: $input-min-height-sm;
     max-width: $input-max-width-sm;
     width: $input-width;
+    @include sm {
+      margin: 0 calc($margin-sm / 42);
+    }
     &::placeholder {
       font-style: italic;
       color: rgba($white, 0.75);

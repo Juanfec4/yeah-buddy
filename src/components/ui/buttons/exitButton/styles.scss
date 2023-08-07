@@ -1,0 +1,27 @@
+@use "../../../../styles/partials/colors" as *;
+@use "../../../../styles/partials/variables" as *;
+
+.exit {
+  position: absolute;
+  right: $padding-sm;
+  top: $padding-sm;
+  z-index: 10;
+  &:hover {
+    cursor: pointer;
+  }
+  &__edit-routine {
+    @extend .exit;
+  }
+  &__add-routine {
+    @extend .exit;
+  }
+  &__edit-exercise {
+    @extend .exit;
+  }
+  &__add-exercise {
+    @extend .exit;
+  }
+  &__exercise-gallery {
+    @extend .exit;
+  }
+}
