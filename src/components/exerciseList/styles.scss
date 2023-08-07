@@ -2,20 +2,18 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/responsive" as *;
 .exercise-list {
-  width: max-content;
+  gap: $margin-md;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: $margin-lg;
+  place-items: center;
   @include md {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-content: flex-start;
-    width: calc((350px + $padding-sm) * 3);
+    grid-template-columns: repeat(2, 1fr);
   }
-  @include md {
-    width: calc((350px + $padding-sm) * 4);
+  @include md-lg {
+    grid-template-columns: repeat(3, 1fr);
   }
   @include lg {
-    width: calc((350px + $padding-sm) * 5);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

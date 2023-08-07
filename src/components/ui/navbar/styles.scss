@@ -4,19 +4,29 @@
 
 .nav {
   background-color: $baltic-sea;
-  padding: $padding-sm;
+  padding-top: $padding-sm;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  border-bottom: solid 1px $davy-grey;
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: $padding-sm;
+  }
   &__info {
     display: flex;
     justify-content: space-between;
-    margin: 0 $margin-md;
+    padding: 0 $padding-sm;
   }
   &__toggle {
+    display: block;
     &:hover {
       cursor: pointer;
+    }
+    @include md {
+      display: none;
     }
   }
   &__title {
@@ -25,12 +35,51 @@
     &--accent {
       color: $salmon-dark;
     }
+    @include md {
+      text-align: start;
+    }
   }
   &__link {
     color: $white;
     text-decoration: none;
     &--active {
+      @extend .nav__link;
       color: $salmon-dark;
+    }
+  }
+  &__container {
+    margin-top: $margin-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    &--desktop {
+      @extend .nav__list;
+      display: none;
+      @include md {
+        display: flex;
+        gap: $margin-sm;
+      }
+    }
+  }
+  &__list-item {
+    width: 100%;
+    padding: $padding-sm;
+    text-align: center;
+    border-bottom: solid $border-width $davy-grey;
+    @include md {
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius-sm;
+      padding: calc($padding-sm/2);
+      background-color: rgba($salmon-dark, 0.05);
     }
   }
 }

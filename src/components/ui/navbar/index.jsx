@@ -59,6 +59,35 @@ const Navbar = () => {
               </li>
             </ul>
           ) : null}
+          <ul className="nav__list--desktop">
+            <li className="nav__list-item">
+              <NavLink
+                to="/"
+                className={({ isActive }) => "nav__link" + (isActive ? "--active" : "")}
+                onClick={closeMobileMenu}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__list-item">
+              <NavLink
+                to="/exercises"
+                className={({ isActive }) => "nav__link" + (isActive ? "--active" : "")}
+                onClick={closeMobileMenu}
+              >
+                Exercise Manager
+              </NavLink>
+            </li>
+            <li className="nav__list-item">
+              <NavLink
+                to="/routines"
+                className={({ isActive }) => "nav__link" + (isActive ? "--active" : "")}
+                onClick={closeMobileMenu}
+              >
+                Routine Manager
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </>
