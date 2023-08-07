@@ -2,29 +2,18 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/responsive" as *;
 .exercise-gallery {
-  margin: 0 auto;
-  display: grid;
   gap: $margin-md;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-auto-flow: row;
-  @include sm-md {
-    grid-template-columns: repeat(1, 1fr);
-    width: calc(1 * (350px + $margin-md));
-  }
+  margin: $margin-lg;
+  place-items: center;
   @include md {
     grid-template-columns: repeat(2, 1fr);
-    width: calc(2 * (350px + $margin-md));
   }
   @include md-lg {
     grid-template-columns: repeat(3, 1fr);
-    width: calc(3 * (350px + $margin-md));
   }
   @include lg {
-    grid-template-columns: repeat(3, 1fr);
-    width: calc(3 * (350px + $margin-md));
-  }
-  @include xl {
     grid-template-columns: repeat(4, 1fr);
-    width: calc(4 * (350px + $margin-md));
   }
 }

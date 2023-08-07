@@ -1,0 +1,7 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+
+.content {
+  padding: $padding-lg;
+  background-color: $dark-jungle-green;
+}

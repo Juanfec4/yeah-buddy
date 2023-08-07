@@ -8,4 +8,7 @@
   height: 100vh;
   gap: $margin-lg;
   padding: $padding-lg;
+  &__heading {
+    text-align: center;
+  }
 }

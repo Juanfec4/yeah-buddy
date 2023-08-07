@@ -9,9 +9,9 @@ const ExercisesPage = () => {
     fetchExercises();
   }, []);
   return (
-    <div className="exercise-list">
-      <h1 className="exercise-list__heading">Exercises</h1>
-      <div className="exercise-list__content">
+    <div className="exercise-gallery-list">
+      <h1 className="exercise-gallery-list__heading">Exercises</h1>
+      <div className="exercise-gallery-list__content">
         <ExerciseGallery exercises={exercises.data} />
       </div>
     </div>

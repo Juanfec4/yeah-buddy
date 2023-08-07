@@ -1,0 +1,36 @@
+@use "../../../styles/partials/colors" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/responsive" as *;
+
+.nav {
+  background-color: $baltic-sea;
+  padding: $padding-sm;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  border-bottom: solid 1px $davy-grey;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 $margin-md;
+  }
+  &__toggle {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__title {
+    width: 100%;
+    text-align: center;
+    &--accent {
+      color: $salmon-dark;
+    }
+  }
+  &__link {
+    color: $white;
+    text-decoration: none;
+    &--active {
+      color: $salmon-dark;
+    }
+  }
+}

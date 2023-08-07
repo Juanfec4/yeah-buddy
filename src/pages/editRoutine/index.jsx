@@ -11,6 +11,10 @@ const EditRoutinePage = () => {
   const location = useLocation();
   const routine = location?.state?.routine;
 
-  return <EditRoutine targetRoutine={routine} />;
+  return (
+    <div className="content">
+      <EditRoutine targetRoutine={routine} />
+    </div>
+  );
 };
 export default EditRoutinePage;

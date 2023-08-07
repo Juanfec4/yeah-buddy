@@ -3,30 +3,18 @@
 @use "../../styles/partials/responsive" as *;
 
 .routine-gallery {
-  margin: 0 auto;
-  display: grid;
   gap: $margin-md;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-auto-flow: row;
-  padding-top: $padding-md;
-  @include sm-md {
-    grid-template-columns: repeat(1, 1fr);
-    width: calc(1 * (300px + $margin-md));
-  }
+  margin: $margin-lg;
+  place-items: center;
   @include md {
     grid-template-columns: repeat(2, 1fr);
-    width: calc(2 * (300px + $margin-md));
   }
   @include md-lg {
     grid-template-columns: repeat(3, 1fr);
-    width: calc(3 * (300px + $margin-md));
   }
   @include lg {
-    grid-template-columns: repeat(3, 1fr);
-    width: calc(3 * (300px + $margin-md));
-  }
-  @include xl {
     grid-template-columns: repeat(4, 1fr);
-    width: calc(4 * (300px + $margin-md));
   }
 }

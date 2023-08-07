@@ -1,16 +1,17 @@
 @use "../../../../styles/partials/colors" as *;
 @use "../../../../styles/partials/variables" as *;
-
+@use "../../../../styles/partials/responsive" as *;
 .edit-form {
   display: flex;
   flex-direction: column;
-  min-width: $card-min-width;
-  max-width: $card-max-width;
   width: 100%;
   background-color: $medium-grey;
   padding: $padding-md;
   border-radius: $border-radius-md;
   border: $davy-grey $border-width solid;
+  @include sm-md {
+    width: $card-max-width-md;
+  }
   &__heading {
     text-align: center;
     text-wrap: balance;

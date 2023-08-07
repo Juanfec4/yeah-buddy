@@ -9,6 +9,10 @@ const AddRoutinePage = () => {
     fetchExercises();
   }, []);
 
-  return <EditRoutine />;
+  return (
+    <div className="content">
+      <EditRoutine />
+    </div>
+  );
 };
 export default AddRoutinePage;

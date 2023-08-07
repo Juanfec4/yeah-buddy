@@ -8,9 +8,11 @@ const RoutineListPage = () => {
     fetchPlans();
   }, []);
   return (
-    <div className="routines-list-container">
-      <h1>Routines</h1>
-      <RoutineGallery routines={plans.data} />
+    <div className="routines-list">
+      <h1 className="routines-list__heading">Routines</h1>
+      <div className="routines-list__content">
+        <RoutineGallery routines={plans.data} />
+      </div>
     </div>
   );
 };
