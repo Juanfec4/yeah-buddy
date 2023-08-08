@@ -7,4 +7,25 @@ const swapItems = (array, index1, index2) => {
   return newArray;
 };
 
-export default { swapItems };
+const filterSearch = (searchTerm, key, array) => {
+  let filteredArray = [...array].filter((element) => {
+    return element[key].toLowerCase().startsWith(searchTerm.toLowerCase());
+  });
+  return filteredArray;
+};
+
+const matchesCategory = (categoryName, array) => {
+  let filteredArray = [...array].filter((element) => {
+    return element.category === categoryName;
+  });
+  return filteredArray;
+};
+
+const matchesBodyPart = (bodyPartName, array) => {
+  let filteredArray = [...array].filter((element) => {
+    return element.bodyPart === bodyPartName;
+  });
+  return filteredArray;
+};
+
+export default { swapItems, filterSearch, matchesCategory, matchesBodyPart };

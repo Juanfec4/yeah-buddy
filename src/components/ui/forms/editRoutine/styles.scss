@@ -12,6 +12,7 @@
   border: $davy-grey $border-width solid;
   min-width: 21rem;
   padding: $padding-sm;
+  margin: $margin-lg 0;
   &__container {
     position: relative;
     display: flex;

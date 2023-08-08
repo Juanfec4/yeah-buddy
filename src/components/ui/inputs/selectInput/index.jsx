@@ -1,13 +1,17 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import "./styles.scss";
 const SelectInput = ({ options, handleChange, label, id, selected }) => {
-  const [option, setOption] = useState(selected ? selected : "disabled");
+  const [option, setOption] = useState("disabled");
 
   useEffect(() => {
     if (option !== "disabled" && handleChange) {
       handleChange(option);
     }
   }, [option]);
+
+  useEffect(() => {
+    setOption(selected ? selected : "disabled");
+  }, [selected]);
 
   const handleChangeOption = (e) => {
     setOption(e.target.value);

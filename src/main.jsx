@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import { createBrowserRouter, RouterProvider, Route, Link, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ExercisesPage from "./pages/exerciseList/index.jsx";
 import AddExercisePage from "./pages/addExercise/index.jsx";
 import EditExercisePage from "./pages/editExercise/index.jsx";
@@ -9,6 +8,8 @@ import AddRoutinePage from "./pages/addRoutine/index.jsx";
 import EditRoutinePage from "./pages/editRoutine/index.jsx";
 import RoutineListPage from "./pages/routineList/index.jsx";
 import Navbar from "./components/ui/navbar/index.jsx";
+import HomePage from "./pages/home/index.jsx";
+import "./styles/global.scss";
 
 const AppLayout = () => {
   return (
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <HomePage />,
       },
       {
         path: "exercises",
