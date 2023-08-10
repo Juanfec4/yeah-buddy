@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
     padding: $padding-sm 0;
+    background-color: $dark-jungle-green;
   }
   &__info {
     display: flex;
@@ -31,11 +32,13 @@
   &__title {
     width: 100%;
     text-align: center;
+    padding-bottom: $padding-sm;
     &--accent {
       color: $salmon-dark;
     }
     @include md {
       text-align: start;
+      padding-bottom: 0;
     }
   }
   &__link {
@@ -77,13 +80,15 @@
     text-align: center;
     border-bottom: solid $border-width $davy-grey;
     @include md {
-      border: none;
+      width: 10rem;
+      // border: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: $border-radius-sm;
+      border-color: $white;
+      // border-radius: $border-radius-sm;
       padding: calc($padding-sm/2);
-      background-color: rgba($salmon-dark, 0.05);
+      // background-color: rgba($salmon-dark, 0.05);
     }
   }
 }

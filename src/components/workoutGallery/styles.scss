@@ -1,0 +1,20 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/responsive" as *;
+
+.workout-gallery {
+  gap: $margin-md;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: $margin-lg;
+  place-items: center;
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md-lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,3 +1,4 @@
+import WorkoutGallery from "../../components/workoutGallery";
 import useStore from "../../store/useStore";
 import { useEffect } from "react";
 const HomePage = () => {
@@ -7,7 +8,11 @@ const HomePage = () => {
     fetchPlans();
   }, []);
 
-  console.log(plans.data);
-  return <div>Home</div>;
+  return (
+    <div>
+      <h2>My Workouts</h2>
+      <WorkoutGallery workouts={plans.data} />
+    </div>
+  );
 };
 export default HomePage;
