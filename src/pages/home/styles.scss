@@ -1,0 +1,7 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/responsive" as *;
+
+.workouts-page {
+  padding: $padding-sm;
+}
