@@ -1,15 +1,19 @@
 import PrimaryButton from "../ui/buttons/primaryButton";
 import CategoryTag from "../ui/misc/categoryTag";
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 const WorkoutCard = ({ workout }) => {
   const [date, setDate] = useState("");
-
+  const navigate = useNavigate();
   useMemo(() => {
     const lastPerformedDate = new Date(workout.lastPerformed).toLocaleDateString();
     setDate(lastPerformedDate);
   }, [workout.lastPerformed]);
 
+  const handleStartWorkout = () => {
+    navigate(`./workouts/${workout._id}`);
+  };
   return (
     <div className="workout-card">
       <h3 className="workout-card__heading">{workout.name}</h3>
@@ -31,7 +35,7 @@ const WorkoutCard = ({ workout }) => {
             })
           : null}
       </ul>
-      <PrimaryButton content={"Start workout"} />
+      <PrimaryButton content={"Start workout"} handleClick={handleStartWorkout} />
     </div>
   );
 };

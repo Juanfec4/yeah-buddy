@@ -24,10 +24,12 @@ const ExerciseCard = ({ exercise, inRoutine }) => {
     <div className="exercise-card">
       <div className="exercise-card__container">
         <h3 className="exercise-card__heading">{exercise.name}</h3>
-        <span className="exercise-card__buttons-container">
-          <ActionButton action={"edit"} iconSrc={editIcon} handleClick={handleEditClick} />
-          <ActionButton action={"delete"} iconSrc={deleteIcon} handleClick={handleDeleteClick} />
-        </span>
+        {!inRoutine ? (
+          <span className="exercise-card__buttons-container">
+            <ActionButton action={"edit"} iconSrc={editIcon} handleClick={handleEditClick} />
+            <ActionButton action={"delete"} iconSrc={deleteIcon} handleClick={handleDeleteClick} />
+          </span>
+        ) : null}
       </div>
       <span className="exercise-card__container">
         <CategoryTag content={exercise.category} />

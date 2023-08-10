@@ -10,6 +10,7 @@ import RoutineListPage from "./pages/routineList/index.jsx";
 import Navbar from "./components/ui/navbar/index.jsx";
 import HomePage from "./pages/home/index.jsx";
 import "./styles/global.scss";
+import WorkoutPage from "./pages/workout/index.jsx";
 
 const AppLayout = () => {
   return (
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "routines/edit",
         element: <EditRoutinePage />,
+      },
+      {
+        path: "workouts/:id",
+        element: <WorkoutPage />,
       },
     ],
   },

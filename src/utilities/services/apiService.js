@@ -18,4 +18,10 @@ const deleteObject = async (endpoint, id) => {
   const response = await axios.delete(`${import.meta.env.VITE_API_URL}/${endpoint}/${id}`);
   return response;
 };
-export default { fetchAll, postObject, deleteObject, patchObject };
+
+const fetchByID = async (endpoint, id) => {
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/${endpoint}/${id}`);
+  return response;
+};
+
+export default { fetchAll, postObject, deleteObject, patchObject, fetchByID };
