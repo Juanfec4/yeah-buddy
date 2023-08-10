@@ -2,7 +2,6 @@ import WorkoutCard from "../workoutCard";
 import "./styles.scss";
 
 const WorkoutGallery = ({ workouts }) => {
-  console.log(workouts);
   return (
     <div className="workout-gallery">
       {workouts

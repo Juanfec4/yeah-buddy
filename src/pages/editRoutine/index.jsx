@@ -15,7 +15,6 @@ const EditRoutinePage = () => {
   }, []);
 
   const handleExit = () => {
-    console.log("clicked");
     navigate("../routines");
   };
   return (
